@@ -13,7 +13,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{99140d23-6caa-f1e1-db9f-1ef94e92b663}</ProjectGuid>
+    <ProjectGuid>{be982ec0-1659-9dab-4d8b-f912cb9e6a85}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\Client\Systems\ClientInputSystem.cs" />
      <Compile Include="Assets\Scripts\Client\ClientConfig.cs" />
      <Compile Include="Assets\Scripts\Client\ConnectPanel.cs" />
+     <Compile Include="Assets\Scripts\Client\ClientVisualManager.cs" />
      <Compile Include="Assets\Scripts\Client\Systems\ClientRpcSendSystem.cs" />
      <Compile Include="Assets\Scripts\Server\Systems\ServerRpcReceiveSystem.cs" />
      <Compile Include="Assets\Scripts\Mixed\Components\SpawnPlayerArmyServerRPC.cs" />
@@ -71,7 +72,6 @@
      <Compile Include="Assets\Scripts\Mixed\Systems\StreamingInitSystem.cs" />
      <Compile Include="Assets\Scripts\Mixed\Components\GameConfig.cs" />
      <Compile Include="Assets\Scripts\Server\Systems\ServerInputInitSystem.cs" />
-     <Compile Include="Assets\Scripts\Client\ClientVisualManager.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -316,28 +316,28 @@
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.0f1-dots/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
  </Reference>
  <Reference Include="ExternalCSharpCompiler">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/PackageCache/com.unity.roslyn@0.1.1-preview/ExternalCSharpCompiler.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/PackageCache/com.unity.roslyn@0.1.1-preview/ExternalCSharpCompiler.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Collections.LowLevel.ILSupport">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/PackageCache/com.unity.collections@0.17.0-preview.18/Unity.Collections.LowLevel.ILSupport/Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/PackageCache/com.unity.collections@0.17.0-preview.18/Unity.Collections.LowLevel.ILSupport/Unity.Collections.LowLevel.ILSupport.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Burst.Unsafe">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/PackageCache/com.unity.burst@1.5.3/Unity.Burst.Unsafe.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/PackageCache/com.unity.burst@1.5.3/Unity.Burst.Unsafe.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Burst.Cecil.Mdb">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/PackageCache/com.unity.burst@1.5.3/Unity.Burst.CodeGen/Unity.Burst.Cecil.Mdb.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/PackageCache/com.unity.burst@1.5.3/Unity.Burst.CodeGen/Unity.Burst.Cecil.Mdb.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Burst.Cecil.Pdb">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/PackageCache/com.unity.burst@1.5.3/Unity.Burst.CodeGen/Unity.Burst.Cecil.Pdb.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/PackageCache/com.unity.burst@1.5.3/Unity.Burst.CodeGen/Unity.Burst.Cecil.Pdb.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Burst.Cecil">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/PackageCache/com.unity.burst@1.5.3/Unity.Burst.CodeGen/Unity.Burst.Cecil.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/PackageCache/com.unity.burst@1.5.3/Unity.Burst.CodeGen/Unity.Burst.Cecil.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Burst.Cecil.Rocks">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/PackageCache/com.unity.burst@1.5.3/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/PackageCache/com.unity.burst@1.5.3/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0-preview/Runtime/Newtonsoft.Json.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0-preview/Runtime/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.0f1-dots/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -691,178 +691,178 @@
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.0f1-dots/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/mscorlib.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Transforms.Hybrid">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Transforms.Hybrid.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Transforms.Hybrid.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Properties">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Properties.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Properties.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Serialization">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Serialization.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Serialization.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Universal.Shaders">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.CacheServer">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/UnityEditor.CacheServer.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/UnityEditor.CacheServer.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Searcher.Editor">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rendering.Hybrid.Editor">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Rendering.Hybrid.Editor.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Rendering.Hybrid.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Build.macOS.Classic">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Build.macOS.Classic.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Build.macOS.Classic.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Networking.Transport">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Networking.Transport.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Networking.Transport.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Entities.Hybrid.EndToEnd.Tests">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Entities.Hybrid.EndToEnd.Tests.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Entities.Hybrid.EndToEnd.Tests.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Properties.UI.Editor">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Properties.UI.Editor.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Properties.UI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ShaderGraph.Editor">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Scenes">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Scenes.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Scenes.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Mathematics.Extensions">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Mathematics.Extensions.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Mathematics.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Mathematics.Editor">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Transforms">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Transforms.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Transforms.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Collections">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Collections.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Collections.dll</HintPath>
  </Reference>
  <Reference Include="Unity.NetCode.Authoring.Hybrid">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.NetCode.Authoring.Hybrid.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.NetCode.Authoring.Hybrid.dll</HintPath>
  </Reference>
  <Reference Include="Unity.NetCode">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.NetCode.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.NetCode.dll</HintPath>
  </Reference>
  <Reference Include="Unity.NetCode.Editor">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.NetCode.Editor.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.NetCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Scenes.Editor">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Scenes.Editor.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Scenes.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Mathematics.Extensions.Hybrid">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Mathematics.Extensions.Hybrid.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Mathematics.Extensions.Hybrid.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Universal.Runtime">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Entities.Editor">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Entities.Editor.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Entities.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Entities.BuildUtils">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Entities.BuildUtils.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Entities.BuildUtils.dll</HintPath>
  </Reference>
  <Reference Include="Unity.DOTS.Editor.Properties">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.DOTS.Editor.Properties.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.DOTS.Editor.Properties.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Profiling.Core">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Profiling.Core.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Profiling.Core.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Burst.Editor">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Core.Runtime">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Build.Desktop">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Build.Desktop.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Build.Desktop.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Entities">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Entities.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Entities.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Entities.Hybrid">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Entities.Hybrid.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Entities.Hybrid.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Jobs.Editor">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Jobs.Editor.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Jobs.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Mathematics">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Burst">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Universal.Editor">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Jobs">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Jobs.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Jobs.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Build.Desktop.Classic">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Build.Desktop.Classic.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Build.Desktop.Classic.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Deformations">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Deformations.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Deformations.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Properties.UI">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Properties.UI.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Properties.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ScriptableBuildPipeline">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Serialization.Editor">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Serialization.Editor.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Serialization.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ScriptableBuildPipeline.Editor">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rendering.Hybrid">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Rendering.Hybrid.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Rendering.Hybrid.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Core.Editor">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Entities.Hybrid.HybridComponents">
- <HintPath>/Users/george.li/Desktop/Projects/NetCodeStressTest/StressTest/Library/ScriptAssemblies/Unity.Entities.Hybrid.HybridComponents.dll</HintPath>
+ <HintPath>/Users/george.li/Desktop/Projects/NetCodeTest/Library/ScriptAssemblies/Unity.Entities.Hybrid.HybridComponents.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
